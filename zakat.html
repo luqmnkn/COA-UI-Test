@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100% Zakat Policy & Transparency | Children of Adam (COA)</title>
+  <meta name="description" content="100% Zakat Policy: 0% admin deductions. Every dollar of your Zakat goes directly to eligible beneficiaries. Calculate and fulfill your Zakat with Children of Adam.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="top-bar-badge"><i class="fa-solid fa-shield-halved"></i> 501(c)(3) Tax-Exempt Non-Profit</span>
+        <span>Federal Tax ID: <strong>45-4397298</strong></span>
+        <span class="badge badge-green" style="font-size:0.72rem; padding: 0.15rem 0.5rem;">
+          <i class="fa-solid fa-check"></i> 100% Zakat Policy · 0% Admin Deductions
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+15162340324" class="top-bar-link"><i class="fa-solid fa-phone"></i> +1 (516) 234-0324</a>
+        <a href="mailto:info@childrenofadam.us" class="top-bar-link"><i class="fa-solid fa-envelope"></i> info@childrenofadam.us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://childrenofadam.ngo/staging/6737/wp-content/uploads/2026/10/logo.png" 
+             onerror="this.onerror=null; this.src='assets/images/logo.png';" 
+             alt="Children of Adam Logo" 
+             class="brand-logo-img">
+        
+      </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="programs.html">Programs</a></li>
+        <li class="nav-item active"><a href="zakat.html" class="nav-link">Zakat 100%</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button onclick="openDonateModal('100% Zakat Fund')" class="btn btn-primary btn-sm">Pay Zakat</button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <aside id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      
+      <button id="closeDrawerBtn" class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul style="display:flex; flex-direction:column; gap:1rem; margin-bottom: 2rem;">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="programs.html" class="nav-link">Programs</a></li>
+      <li><a href="zakat.html" class="nav-link">100% Zakat Policy</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- HERO -->
+  <section style="background-color:var(--color-sand); padding: 4.5rem 0 3.5rem; border-bottom: 1px solid var(--color-stone);">
+    <div class="container" style="text-align:center; max-width:840px;">
+      <span class="badge badge-green" style="margin-bottom:1rem; font-size:0.85rem; padding:0.4rem 1rem;">
+        <i class="fa-solid fa-certificate"></i> Shariah Compliant · 100% Delivery
+      </span>
+      <h1 style="font-size:3.3rem; margin-bottom:1rem;">Our 100% Zakat Policy</h1>
+      <p style="font-size:1.15rem; color:var(--color-gray-700); line-height:1.7;">
+        Every single cent of your Zakat reaches eligible people in need. Not a penny is deducted for administration, fundraising, or marketing fees.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOUR PILLARS OF ZAKAT TRANSPARENCY -->
+  <section style="padding: 5rem 0; background-color:var(--color-white);">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:2rem; margin-bottom:4rem;">
+        <div style="background:var(--color-sand); padding:2.25rem; border-radius:var(--radius-md); border-top:4px solid var(--brand-green);">
+          <div style="font-size:2rem; color:var(--brand-green); margin-bottom:1rem;"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3 style="font-size:1.4rem; margin-bottom:0.75rem;">0% Admin Deductions</h3>
+          <p style="font-size:0.92rem; color:var(--color-gray-600); line-height:1.6;">
+            100% of your Zakat goes directly into the hands of eligible recipients (the poor, destitute, widows, and orphans).
+          </p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:2.25rem; border-radius:var(--radius-md); border-top:4px solid var(--brand-red);">
+          <div style="font-size:2rem; color:var(--brand-red); margin-bottom:1rem;"><i class="fa-solid fa-vault"></i></div>
+          <h3 style="font-size:1.4rem; margin-bottom:0.75rem;">Segregated Accounts</h3>
+          <p style="font-size:0.92rem; color:var(--color-gray-600); line-height:1.6;">
+            All Zakat funds are deposited into strictly restricted bank accounts and never co-mingled with administrative or general operational budgets.
+          </p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:2.25rem; border-radius:var(--radius-md); border-top:4px solid var(--brand-cyan);">
+          <div style="font-size:2rem; color:var(--brand-cyan); margin-bottom:1rem;"><i class="fa-solid fa-book-quran"></i></div>
+          <h3 style="font-size:1.4rem; margin-bottom:0.75rem;">Scholarly Oversight</h3>
+          <p style="font-size:0.92rem; color:var(--color-gray-600); line-height:1.6;">
+            Guided and verified by our Chairperson Mufti Mohammad Farhan, PhD, and independent certified auditors to verify strict Quranic compliance.
+          </p>
+        </div>
+      </div>
+
+      <!-- 100% ZAKAT ALLOCATION DIRECTORY -->
+      <div style="background:var(--color-sand); border:1px solid var(--color-stone); border-radius:var(--radius-lg); padding:3.5rem; box-shadow:var(--shadow-card); max-width:960px; margin:0 auto 4rem;">
+        <div style="text-align:center; max-width:680px; margin:0 auto 2.5rem;">
+          <span class="section-label">Direct Field Delivery</span>
+          <h2 class="section-heading" style="font-size:2.5rem; margin-bottom:0.5rem;">Where Your Zakat Goes</h2>
+          <p style="color:var(--color-gray-600);">
+            100% of your Zakat funds eligible individuals: widows, orphans, disabled children, and families living in extreme poverty.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:1.75rem; margin-bottom:2.5rem;">
+          <div style="background:#fff; padding:2rem; border-radius:var(--radius-md); border-left:4px solid var(--brand-red);">
+            <h4 style="font-size:1.25rem; margin-bottom:0.5rem;"><i class="fa-solid fa-person-shelter" style="color:var(--brand-red);"></i> Widows & Impoverished Families</h4>
+            <p style="font-size:0.9rem; color:var(--color-gray-600); margin-bottom:1.25rem;">Monthly food hampers, clean water, and emergency medical kits directly handed to verified eligible families.</p>
+            <button onclick="openDonateModal('100% Zakat - Widows & Families', '100')" class="btn btn-primary btn-sm">Donate Zakat ($100)</button>
+          </div>
+
+          <div style="background:#fff; padding:2rem; border-radius:var(--radius-md); border-left:4px solid var(--brand-green);">
+            <h4 style="font-size:1.25rem; margin-bottom:0.5rem;"><i class="fa-solid fa-child-reaching" style="color:var(--brand-green);"></i> Orphan & Child Education</h4>
+            <p style="font-size:0.9rem; color:var(--color-gray-600); margin-bottom:1.25rem;">Tuition, books, uniforms, and daily hot school meals for 570+ out-of-school students at Takmeel schools.</p>
+            <button onclick="openDonateModal('100% Zakat - Orphan Education', '50')" class="btn btn-secondary btn-sm">Support Child ($50)</button>
+          </div>
+
+          <div style="background:#fff; padding:2rem; border-radius:var(--radius-md); border-left:4px solid var(--brand-cyan);">
+            <h4 style="font-size:1.25rem; margin-bottom:0.5rem;"><i class="fa-solid fa-wheelchair" style="color:#0284c7;"></i> Gaza: Medical & Mobility Aid</h4>
+            <p style="font-size:0.9rem; color:var(--color-gray-600); margin-bottom:1.25rem;">Prosthetics, physical rehabilitation, wheelchairs, and trauma care for individuals wounded in Gaza.</p>
+            <button onclick="openDonateModal('100% Zakat - Gaza Mobility', '250')" class="btn btn-primary btn-sm" style="background:#0284c7; border-color:#0284c7;">Give Mobility ($250)</button>
+          </div>
+
+          <div style="background:#fff; padding:2rem; border-radius:var(--radius-md); border-left:4px solid var(--brand-amber);">
+            <h4 style="font-size:1.25rem; margin-bottom:0.5rem;"><i class="fa-solid fa-notes-medical" style="color:#d97706;"></i> Free Psychiatric Medical Care</h4>
+            <p style="font-size:0.9rem; color:var(--color-gray-600); margin-bottom:1.25rem;">Providing free clinical checkups, psychiatric medications, and therapeutic support for destitute patients.</p>
+            <button onclick="openDonateModal('100% Zakat - Bani Adam Hospital', '15')" class="btn btn-primary btn-sm" style="background:#d97706; border-color:#d97706;">Sponsor Care ($15)</button>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <button onclick="openDonateModal('100% Zakat Fund')" class="btn btn-primary btn-lg" style="font-size:1.15rem; padding:0.9rem 2.5rem;">
+            <i class="fa-solid fa-shield-heart"></i> Fulfill My Zakat (100% Direct Delivery)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW ARE ADMIN EXPENSES COVERED? -->
+  <section style="background-color:var(--color-sand); padding: 5rem 0;">
+    <div class="container" style="max-width:820px; text-align:center;">
+      <span class="section-label">Complete Transparency</span>
+      <h2 class="section-heading">How Are Our Operations Funded?</h2>
+      <p style="color:var(--color-gray-700); font-size:1.1rem; line-height:1.7; margin-bottom:2rem;">
+        People often ask: <em>If 0% is taken from Zakat, how does Children of Adam keep the lights on?</em><br><br>
+        All operational, logistics, software, and administrative overheads are funded <strong>100% separately</strong> through dedicated private gifts from our trustees, board members, and designated non-Zakat administrative sponsorships.
+      </p>
+      <div style="display:inline-flex; align-items:center; gap:0.5rem; background:#fff; padding:0.75rem 1.5rem; border-radius:var(--radius-full); box-shadow:var(--shadow-sm); font-weight:700; color:var(--brand-green-dark);">
+        <i class="fa-solid fa-check-double"></i> 501(c)(3) Audited by Independent CPAs Annually
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="brand-logo-wrap" style="margin-bottom:1rem;">
+            <img src="https://childrenofadam.ngo/staging/6737/wp-content/uploads/2026/10/logo.png" 
+                 onerror="this.onerror=null; this.src='assets/images/logo.png';" 
+                 alt="COA Logo" style="height:48px; filter: brightness(1.2);">
+            
+          </div>
+          <p class="footer-brand-desc">
+            501(c)(3) Non-Profit · Federal Tax ID 45-4397298 · Founded 2011, Long Island, NY.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="zakat.html">100% Zakat Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Offices</h4>
+          <p style="font-size:0.88rem; color:#9ca3af; line-height:1.6;">
+            159 Railroad St, Huntington Station, NY 11746<br>
+            Phone: +1 (516) 234-0324<br>
+            Email: info@childrenofadam.us
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Pay Zakat</h4>
+          <button onclick="openDonateModal('100% Zakat Fund')" class="btn btn-primary" style="width:100%;">
+            <i class="fa-solid fa-heart"></i> Fulfill Zakat
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Children of Adam. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div id="donateModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="donateModalProgramTitle" class="modal-title font-serif">100% Zakat Donation</h3>
+        <button onclick="closeModal('donateModal')" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="donationForm">
+          <div class="form-group">
+            <label class="form-label">Zakat Amount (USD)</label>
+            <div class="donate-amounts-grid">
+              <button type="button" class="amount-btn modal-amount-btn" data-val="100" style="color:#111; border-color:#d1d5db;">$100</button>
+              <button type="button" class="amount-btn modal-amount-btn" data-val="250" style="color:#111; border-color:#d1d5db;">$250</button>
+              <button type="button" class="amount-btn modal-amount-btn" data-val="500" style="color:#111; border-color:#d1d5db;">$500</button>
+              <button type="button" class="amount-btn modal-amount-btn active" data-val="1000" style="color:#111; border-color:#d1d5db;">$1,000</button>
+            </div>
+            <input type="number" id="modalCustomAmount" class="form-control" placeholder="Or custom Zakat amount">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Donor Email (For 501(c)(3) Tax Receipt)</label>
+            <input type="email" required placeholder="name@example.com" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Pay Zakat</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

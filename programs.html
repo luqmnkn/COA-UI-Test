@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs & Relief Directory | Children of Adam (COA)</title>
+  <meta name="description" content="Explore all programs by Children of Adam across Enlighten (Minds), Engage (Hearts), and Empower (Hands). 100% Zakat policy.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filter-btn {
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-gray-300);
+      background: var(--color-white);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--brand-red);
+      color: #fff;
+      border-color: var(--brand-red);
+      box-shadow: 0 4px 12px var(--brand-red-glow);
+    }
+    .program-item {
+      transition: all 0.3s ease;
+    }
+    .program-item.hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="top-bar-badge"><i class="fa-solid fa-shield-halved"></i> 501(c)(3) Tax-Exempt Non-Profit</span>
+        <span>Federal Tax ID: <strong>45-4397298</strong></span>
+        <span class="badge badge-green" style="font-size:0.72rem; padding: 0.15rem 0.5rem;">
+          <i class="fa-solid fa-check"></i> 100% Zakat Policy · 0% Admin Deductions
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+15162340324" class="top-bar-link"><i class="fa-solid fa-phone"></i> +1 (516) 234-0324</a>
+        <a href="mailto:info@childrenofadam.us" class="top-bar-link"><i class="fa-solid fa-envelope"></i> info@childrenofadam.us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://childrenofadam.ngo/staging/6737/wp-content/uploads/2026/10/logo.png" 
+             onerror="this.onerror=null; this.src='assets/images/logo.png';" 
+             alt="Children of Adam Logo" 
+             class="brand-logo-img">
+        
+      </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item active"><a href="programs.html" class="nav-link">Programs Directory</a></li>
+        <li class="nav-item"><a href="zakat.html" class="nav-link">Zakat 100%</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button onclick="openModal('volunteerModal')" class="btn btn-outline btn-sm">Join Us</button>
+        <button onclick="openDonateModal('General Fund')" class="btn btn-primary btn-sm">Donate Now</button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <aside id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      
+      <button id="closeDrawerBtn" class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul style="display:flex; flex-direction:column; gap:1rem; margin-bottom: 2rem;">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="programs.html" class="nav-link">Programs Directory</a></li>
+      <li><a href="zakat.html" class="nav-link">Zakat 100%</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- DIRECTORY HERO -->
+  <section style="background-color:var(--color-sand); padding: 4rem 0 3rem; border-bottom: 1px solid var(--color-stone);">
+    <div class="container" style="text-align:center; max-width:820px;">
+      <span class="section-label">All Initiatives</span>
+      <h1 style="font-size:3.2rem; margin-bottom:1rem;">Our Programs & Relief Directory</h1>
+      <p style="font-size:1.15rem; color:var(--color-gray-700); line-height:1.7;">
+        Explore all active and ongoing work across our three pillars: Enlighten (Minds), Engage (Hearts), and Empower (Hands).
+      </p>
+
+      <!-- Search & Filters -->
+      <div style="margin-top:2.5rem; display:flex; flex-direction:column; gap:1.25rem;">
+        <input type="text" id="progSearchInput" placeholder="🔍 Search by keyword (e.g. Hospital, Water, Teens, Breakfast, Gaza)..." 
+               class="form-control" style="max-width:550px; margin:0 auto; padding:0.9rem 1.25rem; font-size:1rem; border-radius:var(--radius-full);">
+
+        <div style="display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap;" id="filterButtonsGroup">
+          <button class="filter-btn active" data-filter="all">All Programs</button>
+          <button class="filter-btn" data-filter="enlighten">Enlighten (Minds)</button>
+          <button class="filter-btn" data-filter="engage">Engage (Hearts)</button>
+          <button class="filter-btn" data-filter="empower">Empower (Hands)</button>
+          <button class="filter-btn" data-filter="completed">Completed Relief</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS DIRECTORY GRID -->
+  <section style="padding: 5rem 0; background-color:var(--color-white);">
+    <div class="container">
+      <div class="cards-grid-3" id="programsGrid">
+
+        <!-- ==================== ENLIGHTEN ==================== -->
+        <!-- 1. Ask COA -->
+        <div class="service-card program-item" data-category="enlighten" id="ask-coa">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop" alt="Ask COA">
+            <span class="service-card-tag" style="background:var(--brand-red);">Enlighten · Mind</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Ask Children of Adam</h4>
+            <p class="service-card-desc">
+              Weekly live Q&A where you ask scholars your questions about Islam and get clear, caring answers on faith, family, and daily life.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-calendar-days"></i> Tuesdays, 9 PM EST (Live Online)</div>
+            <div style="font-size:0.8rem; color:var(--color-gray-600); margin-bottom:1rem;">
+              Scholars: Mufti Mohammad Farhan, Mufti Muajul Chowdhury, Mufti Abdullah Sheikh, Mufti Umer Abbasi.
+            </div>
+            <div class="service-card-footer">
+              <button onclick="openModal('askModal')" class="btn btn-outline btn-sm">Submit Question</button>
+              <a href="https://youtube.com/@ChildrenOfAdam" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Watch Live</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Deen 4 Teens -->
+        <div class="service-card program-item" data-category="enlighten" id="deen-4-teens">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600&auto=format&fit=crop" alt="Deen 4 Teens">
+            <span class="service-card-tag" style="background:var(--brand-red);">Enlighten · Youth</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Deen 4 Teens</h4>
+            <p class="service-card-desc">
+              Online character-building classes for ages 10 to 17. Teens study Aqeedah, Fiqh, Seerah and Hadith, meeting monthly guest mentors.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-laptop"></i> Format: Interactive Online</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Deen 4 Teens Sponsorship')" class="btn btn-primary btn-sm">Sponsor a Teen</button>
+              <a href="contact.html?reason=deen4teens" class="btn btn-outline btn-sm">Register Teen</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Weekly Seerah Classes -->
+        <div class="service-card program-item" data-category="enlighten" id="seerah">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?q=80&w=600&auto=format&fit=crop" alt="Seerah Class">
+            <span class="service-card-tag" style="background:var(--brand-red);">Enlighten · Seerah</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Weekly Seerah Classes</h4>
+            <p class="service-card-desc">
+              Ongoing weekly classes exploring the life and timeless leadership of Prophet Muhammad (peace be upon him) for modern resilience.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-book-quran"></i> Open to Adults & Families</div>
+            <div class="service-card-footer">
+              <a href="contact.html?reason=seerah" class="btn btn-outline btn-sm">Register Free</a>
+              <button onclick="openDonateModal('Seerah Education Fund')" class="btn btn-primary btn-sm">Support Class</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Deen Intensive -->
+        <div class="service-card program-item" data-category="enlighten" id="deen-intensive">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600&auto=format&fit=crop" alt="Deen Intensive">
+            <span class="service-card-tag" style="background:var(--brand-red);">Enlighten · Tarbiyah</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Deen Intensive</h4>
+            <p class="service-card-desc">
+              An immersive literacy program for seekers who want to boost their comprehension of traditional Islamic sciences and spirituality.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-graduation-cap"></i> Immersive Curriculum</div>
+            <div class="service-card-footer">
+              <a href="contact.html?reason=deen-intensive" class="btn btn-outline btn-sm">Join Intensive</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Enlighten Your Mind -->
+        <div class="service-card program-item" data-category="enlighten">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop" alt="Enlighten Your Mind">
+            <span class="service-card-tag" style="background:var(--brand-red);">Enlighten · Seasonal</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Enlighten Your Mind</h4>
+            <p class="service-card-desc">
+              Seasonal sessions timed to the Islamic calendar (Sha'ban, Ramadan, Dhul Hijjah, Muharram) with doctors and scholars on mental wellness.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-moon"></i> Led by Mufti Mohammad Farhan</div>
+            <div class="service-card-footer">
+              <a href="contact.html" class="btn btn-outline btn-sm">Upcoming Dates</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Takmeel Informal Schools -->
+        <div class="service-card program-item" data-category="enlighten" id="takmeel">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop" alt="Takmeel Schools">
+            <span class="service-card-tag" style="background:var(--brand-green-dark);">Pakistan · SDG 4</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Takmeel Informal Schools</h4>
+            <p class="service-card-desc">
+              6 non-formal schools in Karachi and Islamabad providing quality foundational education to 570+ out-of-school children.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-hand-holding-dollar"></i> PKR 1,500 ($10/mo) Sponsors 1 Student</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Takmeel Informal Schools', '10', 'Monthly')" class="btn btn-primary btn-sm">Sponsor a Child</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== ENGAGE ==================== -->
+        <!-- 7. Soup Kitchen & Mobile Breakfast -->
+        <div class="service-card program-item" data-category="engage" id="hunger-relief">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=600&auto=format&fit=crop" alt="Food Relief">
+            <span class="service-card-tag" style="background:#ea580c;">Engage · SDG 2</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Saturday Mobile Breakfast & Food Bank</h4>
+            <p class="service-card-desc">
+              Nutritious hot breakfasts served free every Saturday from 9 AM to 11 AM in NY community sites, plus ongoing Food Bank emergency distribution.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-location-dot"></i> Huntington Station, Long Island</div>
+            <div class="service-card-footer">
+              <button onclick="openModal('volunteerModal')" class="btn btn-secondary btn-sm">Volunteer</button>
+              <button onclick="openDonateModal('Soup Kitchen & Food Bank', '50')" class="btn btn-primary btn-sm">Sponsor Food</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Care Truck & Donation Bins -->
+        <div class="service-card program-item" data-category="engage" id="care-truck">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb4?q=80&w=600&auto=format&fit=crop" alt="Care Truck">
+            <span class="service-card-tag" style="background:#ea580c;">Engage · SDG 1</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Care Truck & Clothing Bins</h4>
+            <p class="service-card-desc">
+              Mobile units delivering essentials, hygiene packs, and clothing straight to underserved doorsteps. Bins placed at commercial sites collect gently used clothing.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-truck"></i> USA Mobile Outreach</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Care Truck Outreach')" class="btn btn-primary btn-sm">Support Truck</button>
+              <a href="contact.html?reason=hostbin" class="btn btn-outline btn-sm">Host a Bin</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Qatraa Clean Water -->
+        <div class="service-card program-item" data-category="engage" id="clean-water">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=600&auto=format&fit=crop" alt="Water Plant">
+            <span class="service-card-tag" style="background:#0284c7;">Engage · SDG 6</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Qatraa Clean Drinking Water</h4>
+            <p class="service-card-desc">
+              11 commercial-grade filtration plants in Islamabad, tested and maintained regularly, providing safe water to 1,000+ residents every single day.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-faucet-drip"></i> 11 Active Plants in Pakistan</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Qatraa Clean Water Plant', '500')" class="btn btn-primary btn-sm">Fund a Plant</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Mental Health & Healing Circle -->
+        <div class="service-card program-item" data-category="engage" id="mental-health">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=600&auto=format&fit=crop" alt="Mental Health">
+            <span class="service-card-tag" style="background:#16a34a;">Engage · SDG 3</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Mental Health & Healing Circle</h4>
+            <p class="service-card-desc">
+              Free support groups and educational workshops bringing together Islamic spiritual grounding and clinical psychological care without stigma.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-hand-holding-heart"></i> USA & Global Virtual Circles</div>
+            <div class="service-card-footer">
+              <a href="contact.html?reason=healing-circle" class="btn btn-outline btn-sm">Join Circle</a>
+              <button onclick="openDonateModal('Mental Health Outreach')" class="btn btn-primary btn-sm">Support Care</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Roshan Pakistan Solar -->
+        <div class="service-card program-item" data-category="engage">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1508873696983-2df5293cb395?q=80&w=600&auto=format&fit=crop" alt="Solar Energy">
+            <span class="service-card-tag" style="background:#d97706;">Engage · SDG 7</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Roshan Pakistan Solar</h4>
+            <p class="service-card-desc">
+              Delivering sustainable solar power systems to underserved, off-grid communities in rural Pakistan, lighting up homes and schools.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-solar-panel"></i> Clean, Reliable Energy</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Roshan Pakistan Solar Kit', '150')" class="btn btn-primary btn-sm">Light Up a Home</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Center of Excellence, Long Island -->
+        <div class="service-card program-item" data-category="engage" id="center-excellence">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop" alt="Center of Excellence">
+            <span class="service-card-tag" style="background:#7c3aed;">Engage · SDG 11</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Center of Excellence, Long Island</h4>
+            <p class="service-card-desc">
+              The first community facility of its kind for Long Island: a Youth Leadership Hub, Family Unity Center, and Mentorship Hub.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-landmark"></i> Long Island, New York</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Center of Excellence Founding Supporter', '250')" class="btn btn-primary btn-sm">Founding Supporter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== EMPOWER ==================== -->
+        <!-- 13. Bani Adam Hospital -->
+        <div class="service-card program-item" data-category="empower" id="hospital">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&auto=format&fit=crop" alt="Hospital Construction">
+            <span class="service-card-tag" style="background:var(--brand-red);">Empower · Medical Flagship</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Bani Adam Hospital, Karachi</h4>
+            <p class="service-card-desc">
+              Pakistan's first free comprehensive neuropsychiatric hospital across 24,228 sq yds. Free clinics in Gadap, Korangi, and Dumba Goth have impacted 60,000+ lives.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-hospital-user"></i> PKR 2,500 ($15) Sponsors 1 Patient</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Bani Adam Hospital - Lay a Brick', '100')" class="btn btn-primary btn-sm">Lay a Brick ($100)</button>
+              <button onclick="openDonateModal('Bani Adam Hospital - Patient Care', '15')" class="btn btn-outline btn-sm">Sponsor Patient</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Gaza: Restore Mobility -->
+        <div class="service-card program-item" data-category="empower" id="gaza-mobility">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600&auto=format&fit=crop" alt="Prosthetics">
+            <span class="service-card-tag" style="background:var(--brand-red);">Empower · Mobility4Gaza</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Gaza: Restore Mobility</h4>
+            <p class="service-card-desc">
+              Providing prosthetic limbs, surgical rehabilitation, wheelchairs, and physical therapy for victims and children severely injured in Gaza.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-wheelchair"></i> Gaza Ground Operations</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Gaza Restore Mobility Fund', '250')" class="btn btn-primary btn-sm">Restore Mobility</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. Stand with Palestine -->
+        <div class="service-card program-item" data-category="empower" id="palestine">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop" alt="Palestine Relief">
+            <span class="service-card-tag" style="background:var(--brand-red);">Empower · Relief</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Stand with Palestine</h4>
+            <p class="service-card-desc">
+              General humanitarian relief for Palestinian families: emergency medical aid, hot meals, drinking water tankers, and shelter packages.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-hand-holding-medical"></i> 100% Emergency Aid</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Stand With Palestine Emergency Fund', '100')" class="btn btn-primary btn-sm">Send Relief</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16. Pakistan Flood & Crisis Relief -->
+        <div class="service-card program-item" data-category="empower" id="disaster-relief">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=600&auto=format&fit=crop" alt="Flood Relief">
+            <span class="service-card-tag" style="background:var(--brand-red);">Empower · Rapid Relief</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Pakistan Flood Relief</h4>
+            <p class="service-card-desc">
+              Emergency rations, clean drinking water, and winterized weather-proof tents for devastated families in KPK, Gilgit-Baltistan and Kashmir.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-tents"></i> Direct Field Deployment</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Pakistan Flood Relief', '100')" class="btn btn-primary btn-sm">Donate Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17. Rohingya Learning Centers -->
+        <div class="service-card program-item" data-category="empower">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600&auto=format&fit=crop" alt="Rohingya Education">
+            <span class="service-card-tag" style="background:#0284c7;">Empower · Refugee Camps</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Rohingya Learning Centers</h4>
+            <p class="service-card-desc">
+              Classrooms, psychosocial therapy, and daily nutrition for displaced Rohingya refugee children living in camps in Cox's Bazar, Bangladesh.
+            </p>
+            <div class="service-card-meta"><i class="fa-solid fa-certificate"></i> 100% Zakat Eligible</div>
+            <div class="service-card-footer">
+              <button onclick="openDonateModal('Rohingya Learning Centers', '50')" class="btn btn-primary btn-sm">Support Centers</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== COMPLETED CAMPAIGNS ==================== -->
+        <!-- 18. Turkey & Syria Earthquake -->
+        <div class="service-card program-item" data-category="completed">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop" alt="Turkey Relief">
+            <span class="service-card-tag" style="background:#4b5563;">Goal Achieved</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Turkey & Syria Earthquake Appeal</h4>
+            <p class="service-card-desc">Provided emergency container homes, warm blankets, and medical essentials to families devastated by the 7.8 earthquake.</p>
+            <div class="service-card-meta" style="color:var(--brand-green-dark);"><i class="fa-solid fa-circle-check"></i> Successfully Completed</div>
+          </div>
+        </div>
+
+        <!-- 19. Morocco Earthquake Appeal -->
+        <div class="service-card program-item" data-category="completed">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=600&auto=format&fit=crop" alt="Morocco Relief">
+            <span class="service-card-tag" style="background:#4b5563;">Goal Achieved</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Morocco Earthquake Appeal</h4>
+            <p class="service-card-desc">Delivered winter tents, food hampers, and medical supplies to isolated mountain villages in the High Atlas region.</p>
+            <div class="service-card-meta" style="color:var(--brand-green-dark);"><i class="fa-solid fa-circle-check"></i> Successfully Completed</div>
+          </div>
+        </div>
+
+        <!-- 20. Million Meals for Yemen -->
+        <div class="service-card program-item" data-category="completed">
+          <div class="service-card-media">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop" alt="Yemen Relief">
+            <span class="service-card-tag" style="background:#4b5563;">Goal Achieved</span>
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-card-title">Million Meals for Yemen</h4>
+            <p class="service-card-desc">Supplied nutrient-dense food hampers and infant feeding packages across conflict zones in Yemen.</p>
+            <div class="service-card-meta" style="color:var(--brand-green-dark);"><i class="fa-solid fa-circle-check"></i> Successfully Completed</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="brand-logo-wrap" style="margin-bottom:1rem;">
+            <img src="https://childrenofadam.ngo/staging/6737/wp-content/uploads/2026/10/logo.png" 
+                 onerror="this.onerror=null; this.src='assets/images/logo.png';" 
+                 alt="COA Logo" style="height:48px; filter: brightness(1.2);">
+            
+          </div>
+          <p class="footer-brand-desc">
+            501(c)(3) Non-Profit · Federal Tax ID 45-4397298 · Founded 2011, Long Island, NY.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs Directory</a></li>
+            <li><a href="zakat.html">100% Zakat Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Offices</h4>
+          <p style="font-size:0.88rem; color:#9ca3af; line-height:1.6;">
+            159 Railroad St, Huntington Station, NY 11746<br>
+            Phone: +1 (516) 234-0324<br>
+            Email: info@childrenofadam.us
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Donate</h4>
+          <button onclick="openDonateModal('General Fund')" class="btn btn-primary" style="width:100%; margin-bottom:0.75rem;">
+            <i class="fa-solid fa-heart"></i> Donate Now
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Children of Adam. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div id="donateModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="donateModalProgramTitle" class="modal-title font-serif">Support Children of Adam</h3>
+        <button onclick="closeModal('donateModal')" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="donationForm">
+          <div class="form-group">
+            <label class="form-label">Giving Frequency</label>
+            <div class="donate-freq-toggle" style="background:#e5e7eb;">
+              <button type="button" class="freq-btn modal-freq-btn active" data-freq="One-Time" style="color:#111;">One-Time</button>
+              <button type="button" class="freq-btn modal-freq-btn" data-freq="Monthly" style="color:#111;">Monthly Sustainer</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select Amount (USD)</label>
+            <div class="donate-amounts-grid">
+              <button type="button" class="amount-btn modal-amount-btn" data-val="25" style="color:#111; border-color:#d1d5db;">$25</button>
+              <button type="button" class="amount-btn modal-amount-btn" data-val="50" style="color:#111; border-color:#d1d5db;">$50</button>
+              <button type="button" class="amount-btn modal-amount-btn active" data-val="100" style="color:#111; border-color:#d1d5db;">$100</button>
+              <button type="button" class="amount-btn modal-amount-btn" data-val="250" style="color:#111; border-color:#d1d5db;">$250</button>
+            </div>
+            <input type="number" id="modalCustomAmount" class="form-control" placeholder="Or custom USD amount">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Donor Email (For 501(c)(3) Receipt)</label>
+            <input type="email" required placeholder="name@example.com" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Complete Donation</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="volunteerModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Volunteer Application</h3>
+        <button onclick="closeModal('volunteerModal')" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="volunteerForm">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="volName" required class="form-control" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" required class="form-control" placeholder="Email">
+          </div>
+          <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="askModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Ask Children of Adam</h3>
+        <button onclick="closeModal('askModal')" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="askCoaForm">
+          <div class="form-group">
+            <label class="form-label">Your Question</label>
+            <textarea rows="4" required class="form-control" placeholder="Ask about faith, family, or life..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Submit Question</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Real-time Filter & Search Engine -->
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('#filterButtonsGroup .filter-btn');
+      const progItems = document.querySelectorAll('.program-item');
+      const searchInput = document.getElementById('progSearchInput');
+
+      // Check URL params e.g. ?pillar=enlighten
+      const urlParams = new URLSearchParams(window.location.search);
+      const pillarParam = urlParams.get('pillar');
+      if (pillarParam) {
+        filterBtns.forEach(btn => {
+          if (btn.getAttribute('data-filter') === pillarParam) {
+            btn.click();
+          }
+        });
+      }
+
+      function filterPrograms() {
+        const activeFilter = document.querySelector('#filterButtonsGroup .filter-btn.active')?.getAttribute('data-filter') || 'all';
+        const query = searchInput.value.toLowerCase().trim();
+
+        progItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          const text = item.innerText.toLowerCase();
+
+          const matchesCategory = (activeFilter === 'all') || (category === activeFilter);
+          const matchesQuery = query === '' || text.includes(query);
+
+          if (matchesCategory && matchesQuery) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterPrograms();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterPrograms);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Children of Adam (COA)</title>
+  <meta name="description" content="Discover the origins, leadership, core values and vision of Children of Adam. Founded in 2011 on Long Island, NY.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="top-bar-badge"><i class="fa-solid fa-shield-halved"></i> 501(c)(3) Tax-Exempt Non-Profit</span>
+        <span>Federal Tax ID: <strong>45-4397298</strong></span>
+        <span class="badge badge-green" style="font-size:0.72rem; padding: 0.15rem 0.5rem;">
+          <i class="fa-solid fa-check"></i> 100% Zakat Policy · 0% Admin Deductions
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+15162340324" class="top-bar-link"><i class="fa-solid fa-phone"></i> +1 (516) 234-0324</a>
+        <a href="mailto:info@childrenofadam.us" class="top-bar-link"><i class="fa-solid fa-envelope"></i> info@childrenofadam.us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://childrenofadam.ngo/staging/6737/wp-content/uploads/2026/10/logo.png" 
+             onerror="this.onerror=null; this.src='assets/images/logo.png';" 
+             alt="Children of Adam Logo" 
+             class="brand-logo-img">
+        
+      </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item active"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="programs.html?pillar=enlighten" class="nav-link">Enlighten</a></li>
+        <li class="nav-item"><a href="programs.html?pillar=engage" class="nav-link">Engage</a></li>
+        <li class="nav-item"><a href="programs.html?pillar=empower" class="nav-link">Empower</a></li>
+        <li class="nav-item"><a href="zakat.html" class="nav-link">Zakat 100%</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button onclick="openModal('volunteerModal')" class="btn btn-outline btn-sm">Join Us</button>
+        <button onclick="openDonateModal('General Fund')" class="btn btn-primary btn-sm">Donate Now</button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <aside id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      
+      <button id="closeDrawerBtn" class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul style="display:flex; flex-direction:column; gap:1rem; margin-bottom: 2rem;">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="programs.html?pillar=enlighten" class="nav-link">Enlighten</a></li>
+      <li><a href="programs.html?pillar=engage" class="nav-link">Engage</a></li>
+      <li><a href="programs.html?pillar=empower" class="nav-link">Empower</a></li>
+      <li><a href="zakat.html" class="nav-link">Zakat 100%</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- PAGE HEADER -->
+  <section style="background-color:var(--color-sand); padding: 4rem 0 3rem; border-bottom: 1px solid var(--color-stone);">
+    <div class="container" style="text-align:center; max-width:800px;">
+      <span class="section-label">Since 2011 · Long Island, NY</span>
+      <h1 style="font-size:3.2rem; margin-bottom:1rem;">About Children of Adam</h1>
+      <p style="font-size:1.15rem; color:var(--color-gray-700); line-height:1.7;">
+        "Our name reminds us of what we share: every one of us is a child of Adam."
+      </p>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE SECTION -->
+  <section class="about-section" id="who-we-are">
+    <div class="container about-grid">
+      <div>
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-heading" style="font-size:2.5rem;">Rooted in Concern, Built for Action.</h2>
+        <p class="section-lead">
+          Children of Adam (COA) is a US-based 501(c)(3) non-profit founded in 2011 by like-minded professionals on Long Island, New York. We exist to raise empathetic, compassionate young people who are guided by Islamic knowledge and motivated to improve the world.
+        </p>
+        <p style="color:var(--color-gray-700); margin-bottom:1.25rem; line-height:1.7;">
+          We help people build sustainable futures, especially in under-resourced rural communities facing poverty, disease and illiteracy. At home, we run learning, welfare and wellness programs for our neighbors. Abroad, we build water plants, schools, women's wellness centers and a hospital, and we respond fast when disaster strikes.
+        </p>
+        <div style="border-left: 4px solid var(--brand-red); padding-left: 1.25rem; font-style: italic; color:var(--color-gray-800); margin: 1.5rem 0;">
+          "The believers, in their mutual love, mercy and compassion for one another, are like one body..."
+        </div>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800&auto=format&fit=crop" 
+             alt="Community mentoring" 
+             style="border-radius:var(--radius-lg); box-shadow:var(--shadow-xl); filter: grayscale(40%);">
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION, MISSION & VALUES -->
+  <section style="background-color:var(--color-sand); padding: 5rem 0;" id="vision-mission">
+    <div class="container">
+      <div style="text-align:center; max-width:700px; margin:0 auto 3.5rem;">
+        <span class="section-label">Our Guiding Compass</span>
+        <h2 class="section-heading">Vision, Mission & Core Values</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:3.5rem;">
+        <div style="background:#fff; padding:2.5rem; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); border-top:5px solid var(--brand-green);">
+          <div style="font-size:2rem; color:var(--brand-green); margin-bottom:1rem;"><i class="fa-solid fa-eye"></i></div>
+          <h3 style="font-size:1.6rem; margin-bottom:0.75rem;">Our Vision</h3>
+          <p style="font-size:1.05rem; color:var(--color-gray-700); line-height:1.65;">
+            A world where everyone is spiritually well, physically healthy and socially rich.
+          </p>
+        </div>
+
+        <div style="background:#fff; padding:2.5rem; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); border-top:5px solid var(--brand-red);">
+          <div style="font-size:2rem; color:var(--brand-red); margin-bottom:1rem;"><i class="fa-solid fa-bullseye"></i></div>
+          <h3 style="font-size:1.6rem; margin-bottom:0.75rem;">Our Mission</h3>
+          <p style="font-size:1.05rem; color:var(--color-gray-700); line-height:1.65;">
+            To enlighten minds, engage hearts and empower hands through knowledge and research, holistic wellness and humanitarian service, driven by Islamic values.
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Values Table Cards -->
+      <h3 style="text-align:center; font-size:1.8rem; margin-bottom:2rem;">Our Core Values</h3>
+      <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:1.25rem;">
+        <div style="background:#fff; padding:1.5rem; border-radius:var(--radius-md); text-align:center; box-shadow:var(--shadow-sm);">
+          <i class="fa-solid fa-kaaba" style="font-size:1.8rem; color:var(--brand-red); margin-bottom:0.75rem;"></i>
+          <h4 style="font-family:var(--font-sans); font-size:1.05rem; margin-bottom:0.4rem;">Faith</h4>
+          <p style="font-size:0.85rem; color:var(--color-gray-600);">Islamic values guide every program we run.</p>
+        </div>
+
+        <div style="background:#fff; padding:1.5rem; border-radius:var(--radius-md); text-align:center; box-shadow:var(--shadow-sm);">
+          <i class="fa-solid fa-heart" style="font-size:1.8rem; color:var(--brand-green); margin-bottom:0.75rem;"></i>
+          <h4 style="font-family:var(--font-sans); font-size:1.05rem; margin-bottom:0.4rem;">Compassion</h4>
+          <p style="font-size:0.85rem; color:var(--color-gray-600);">We serve people with care, dignity and empathy.</p>
+        </div>
+
+        <div style="background:#fff; padding:1.5rem; border-radius:var(--radius-md); text-align:center; box-shadow:var(--shadow-sm);">
+          <i class="fa-solid fa-scale-balanced" style="font-size:1.8rem; color:var(--brand-cyan); margin-bottom:0.75rem;"></i>
+          <h4 style="font-family:var(--font-sans); font-size:1.05rem; margin-bottom:0.4rem;">Transparency</h4>
+          <p style="font-size:0.85rem; color:var(--color-gray-600);">We are open about how every dollar is used.</p>
+        </div>
+
+        <div style="background:#fff; padding:1.5rem; border-radius:var(--radius-md); text-align:center; box-shadow:var(--shadow-sm);">
+          <i class="fa-solid fa-people-roof" style="font-size:1.8rem; color:var(--brand-amber); margin-bottom:0.75rem;"></i>
+          <h4 style="font-family:var(--font-sans); font-size:1.05rem; margin-bottom:0.4rem;">Community</h4>
+          <p style="font-size:0.85rem; color:var(--color-gray-600);">We grow together through volunteers and partners.</p>
+        </div>
+
+        <div style="background:#fff; padding:1.5rem; border-radius:var(--radius-md); text-align:center; box-shadow:var(--shadow-sm);">
+          <i class="fa-solid fa-leaf" style="font-size:1.8rem; color:var(--brand-green-dark); margin-bottom:0.75rem;"></i>
+          <h4 style="font-family:var(--font-sans); font-size:1.05rem; margin-bottom:0.4rem;">Sustainability</h4>
+          <p style="font-size:0.85rem; color:var(--color-gray-600);">We favor lasting solutions over temporary short fixes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TREE BEHIND OUR LOGO -->
+  <section style="padding: 5rem 0;" id="tree-logo">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:3.5rem; align-items:center;">
+        <div style="text-align:center;">
+          <img src="https://childrenofadam.ngo/staging/6737/wp-content/uploads/2026/10/logo.png" 
+               onerror="this.onerror=null; this.src='assets/images/logo.png';" 
+               alt="Children of Adam Tree Logo" 
+               style="max-width:320px; margin:0 auto; filter:drop-shadow(0 10px 25px rgba(0,0,0,0.1));">
+          <p style="margin-top:1.5rem; font-family:var(--font-serif); font-size:1.2rem; color:var(--brand-red);">
+            "Enlighten · Engage · Empower"
+          </p>
+        </div>
+
+        <div>
+          <span class="section-label">Symbolism & Meaning</span>
+          <h2 class="section-heading" style="font-size:2.5rem;">The Tree Behind Our Logo</h2>
+          <p style="color:var(--color-gray-700); line-height:1.7; margin-bottom:2rem;">
+            A tree does not ask which part matters most. Roots nurture, branches connect, and fruits give back. Every program, volunteer, donor, and student is part of this living, growing ecosystem.
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+              <div style="width:48px; height:48px; border-radius:50%; background:var(--brand-green-light); color:var(--brand-green-dark); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div>
+                <h4 style="font-family:var(--font-sans); font-size:1.1rem; color:var(--brand-green-dark);">Roots: Scholars, Teachers, Parents, Mentors, Donors</h4>
+                <p style="font-size:0.9rem; color:var(--color-gray-600);">Nurture everything above them: the people behind Islamic excellence and sustaining funds.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+              <div style="width:48px; height:48px; border-radius:50%; background:var(--brand-cyan-light); color:#0284c7; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <i class="fa-solid fa-code-branch"></i>
+              </div>
+              <div>
+                <h4 style="font-family:var(--font-sans); font-size:1.1rem; color:#0284c7;">Branches: Volunteers, Community Members, Caregivers</h4>
+                <p style="font-size:0.9rem; color:var(--color-gray-600);">Connect the work to neighbors and families through direct action and presence.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+              <div style="width:48px; height:48px; border-radius:50%; background:var(--brand-red-light); color:var(--brand-red); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <i class="fa-solid fa-apple-whole"></i>
+              </div>
+              <div>
+                <h4 style="font-family:var(--font-sans); font-size:1.1rem; color:var(--brand-red);">Fruits: Students, Families, Future Leaders</h4>
+                <p style="font-size:0.9rem; color:var(--color-gray-600);">Give back by serving the next generation, advancing human dignity everywhere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARD OF TRUSTEES -->
+  <section style="background-color:var(--color-sand); padding: 5rem 0;" id="trustees">
+    <div class="container">
+      <div style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+        <span class="section-label">Leadership</span>
+        <h2 class="section-heading">Our Board of Trustees</h2>
+        <p style="color:var(--color-gray-600);">Experienced leaders providing governance, religious integrity, and financial stewardship.</p>
+      </div>
+
+      <div class="trustees-grid">
+        <div class="trustee-card">
+          <div class="trustee-avatar"><i class="fa-solid fa-user-tie"></i></div>
+          <h4 class="trustee-name">Mufti Mohammad Farhan, PhD</h4>
+          <div class="trustee-role">Trustee and Chairperson</div>
+          <p style="font-size:0.85rem; color:var(--color-gray-600); margin-top:0.75rem;">Renowned Islamic scholar directing theological guidance and youth curriculum.</p>
+        </div>
+
+        <div class="trustee-card">
+          <div class="trustee-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+          <h4 class="trustee-name">Dr. Syed Tariq Ibrahim</h4>
+          <div class="trustee-role">Trustee and President</div>
+          <p style="font-size:0.85rem; color:var(--color-gray-600); margin-top:0.75rem;">Medical practitioner spearheading health operations and clinical excellence.</p>
+        </div>
+
+        <div class="trustee-card">
+          <div class="trustee-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+          <h4 class="trustee-name">Dr. Shaik Ali</h4>
+          <div class="trustee-role">Trustee and Vice President</div>
+          <p style="font-size:0.85rem; color:var(--color-gray-600); margin-top:0.75rem;">Overseeing international partnerships and healthcare development initiatives.</p>
+        </div>
+
+        <div class="trustee-card">
+          <div class="trustee-avatar"><i class="fa-solid fa-briefcase"></i></div>
+          <h4 class="trustee-name">Br. Syed Wasim Quadri, CPA</h4>
+          <div class="trustee-role">Treasurer & Global Chief Relief</div>
+          <p style="font-size:0.85rem; color:var(--color-gray-600); margin-top:0.75rem;">Certified public accountant directing 100% Zakat allocation and audit rigor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UN SDGS ALIGNMENT SECTION -->
+  <section style="padding: 5rem 0;" id="sdgs">
+    <div class="container">
+      <div style="text-align:center; max-width:760px; margin:0 auto 3.5rem;">
+        <span class="section-label">Global Standards</span>
+        <h2 class="section-heading">Our Impact on the UN SDGs</h2>
+        <p style="color:var(--color-gray-700); font-size:1.05rem;">
+          Our humanitarian and educational work directly aligns with 7 United Nations Sustainable Development Goals:
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+        <div style="background:var(--color-sand); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid #e52e2e;">
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-hand-holding-dollar"></i> SDG 1: No Poverty</h4>
+          <p style="font-size:0.88rem; color:var(--color-gray-600);">Care trucks, clothing donation bins, Cars 4 Jannah vehicle donations, and emergency cash assistance.</p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid #ea580c;">
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-bowl-rice"></i> SDG 2: Zero Hunger</h4>
+          <p style="font-size:0.88rem; color:var(--color-gray-600);">Soup kitchen, food bank, Saturday mobile community breakfast, and widow ration packs.</p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid #16a34a;">
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-heart-pulse"></i> SDG 3: Good Health & Wellbeing</h4>
+          <p style="font-size:0.88rem; color:var(--color-gray-600);">Free psychiatric clinics, Bani Adam Hospital, healing circles, and Mirpur women's wellness centers.</p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid #dc2626;">
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-graduation-cap"></i> SDG 4: Quality Education</h4>
+          <p style="font-size:0.88rem; color:var(--color-gray-600);">Deen 4 Teens, math tutoring, and 6 Takmeel informal schools educating 570+ out-of-school children.</p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid #0284c7;">
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-faucet-drip"></i> SDG 6: Clean Water & Sanitation</h4>
+          <p style="font-size:0.88rem; color:var(--color-gray-600);">Qatraa: 11 filtration plants in Islamabad tested regularly, serving 1,000+ residents every single day.</p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid #9333ea;">
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-scale-unbalanced-flip"></i> SDG 10: Reduced Inequalities</h4>
+          <p style="font-size:0.88rem; color:var(--color-gray-600);">Support for Muslim refugee families in New York, resettlement aid, housing support, and social inclusion.</p>
+        </div>
+
+        <div style="background:var(--color-sand); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid #d97706;">
+          <h4 style="font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-city"></i> SDG 11: Sustainable Cities</h4>
+          <p style="font-size:0.88rem; color:var(--color-gray-600);">Center of Excellence on Long Island: Youth Leadership Hub, Family Unity Center, and community hub.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background-color:var(--brand-red); color:#fff; padding:4.5rem 0; text-align:center;">
+    <div class="container" style="max-width:700px;">
+      <h2 style="color:#fff; font-size:2.6rem; margin-bottom:1rem;">Join Us in Building Stronger Communities</h2>
+      <p style="font-size:1.1rem; opacity:0.95; margin-bottom:2rem;">
+        Give a meal, a coat, an hour, or support a child's education today.
+      </p>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <button onclick="openDonateModal('General Fund')" class="btn btn-white btn-lg">Donate Now</button>
+        <button onclick="openModal('volunteerModal')" class="btn btn-outline-white btn-lg">Become a Volunteer</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="brand-logo-wrap" style="margin-bottom:1rem;">
+            <img src="https://childrenofadam.ngo/staging/6737/wp-content/uploads/2026/10/logo.png" 
+                 onerror="this.onerror=null; this.src='assets/images/logo.png';" 
+                 alt="COA Logo" style="height:48px; filter: brightness(1.2);">
+            
+          </div>
+          <p class="footer-brand-desc">
+            501(c)(3) Non-Profit · Federal Tax ID 45-4397298 · Founded 2011, Long Island, NY.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">All Programs</a></li>
+            <li><a href="zakat.html">100% Zakat Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p style="font-size:0.88rem; color:#9ca3af; line-height:1.6;">
+            159 Railroad St, Huntington Station, NY 11746<br>
+            Phone: +1 (516) 234-0324<br>
+            Email: info@childrenofadam.us
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Support Us</h4>
+          <button onclick="openDonateModal('General Fund')" class="btn btn-primary" style="width:100%; margin-bottom:0.75rem;">
+            <i class="fa-solid fa-heart"></i> Donate Now
+          </button>
+          <button onclick="openDonateModal('100% Zakat Fund')" class="btn btn-outline-white" style="width:100%;"><i class="fa-solid fa-hand-holding-dollar"></i> Pay Zakat (100% Policy)</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Children of Adam. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div id="donateModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="donateModalProgramTitle" class="modal-title font-serif">Support Children of Adam</h3>
+        <button onclick="closeModal('donateModal')" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="donationForm">
+          <div class="form-group">
+            <label class="form-label">Giving Frequency</label>
+            <div class="donate-freq-toggle" style="background:#e5e7eb;">
+              <button type="button" class="freq-btn modal-freq-btn active" data-freq="One-Time" style="color:#111;">One-Time</button>
+              <button type="button" class="freq-btn modal-freq-btn" data-freq="Monthly" style="color:#111;">Monthly Sustainer</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select Amount (USD)</label>
+            <div class="donate-amounts-grid">
+              <button type="button" class="amount-btn modal-amount-btn" data-val="25" style="color:#111; border-color:#d1d5db;">$25</button>
+              <button type="button" class="amount-btn modal-amount-btn" data-val="50" style="color:#111; border-color:#d1d5db;">$50</button>
+              <button type="button" class="amount-btn modal-amount-btn active" data-val="100" style="color:#111; border-color:#d1d5db;">$100</button>
+              <button type="button" class="amount-btn modal-amount-btn" data-val="250" style="color:#111; border-color:#d1d5db;">$250</button>
+            </div>
+            <input type="number" id="modalCustomAmount" class="form-control" placeholder="Or custom USD amount">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Donor Information</label>
+            <input type="email" required placeholder="Email Address for Tax Receipt" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Complete Donation</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="volunteerModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Join the Volunteer Family</h3>
+        <button onclick="closeModal('volunteerModal')" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="volunteerForm">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="volName" required class="form-control" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" required class="form-control" placeholder="Email">
+          </div>
+          <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
