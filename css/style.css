@@ -6,13 +6,13 @@
 
 :root {
   /* Brand Primary Colors (Derived from Logo) */
-  --brand-red: #68a735;
-  --brand-red-dark: #439741;
+  --brand-red: #449a43;
+  --brand-red-dark: #449a43;
   --brand-red-light: #fef2f2;
   --brand-red-soft: #fde8e8;
   
-  --brand-green: #68a735;
-  --brand-green-dark: #4b8022;
+  --brand-green: #449a43;
+  --brand-green-dark: #449a43;
   --brand-green-light: #f0fdf4;
   
   --brand-cyan: #0284c7;
@@ -20,7 +20,7 @@
   --brand-purple: #7c3aed;
   
   /* Oxygen Charity Theme Palette */
-  --color-white: #ffffff;
+  --color-white: #d2e4c1;
   --color-sand: #f8f6f0;
   --color-sand-light: #fdfbf7;
   --color-sand-footer: #ece7de;
@@ -70,7 +70,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-gray-800);
-  background-color: var(--color-white);
+  background-color:#d2e4c1;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
