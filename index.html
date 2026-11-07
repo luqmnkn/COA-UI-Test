@@ -104,7 +104,7 @@
 
       <!-- Navbar Actions -->
       <div class="nav-actions">
-        <button onclick="openModal('volunteerModal')" class="btn btn-outline btn-sm">
+        <button onclick="openModal('volunteerModal')" class="btn btn-outline btn-sm nav-btn-join">
           Join Us
         </button>
         <button onclick="openDonateModal('General Fund')" class="btn btn-primary btn-sm">
@@ -154,12 +154,22 @@
   <section class="hero-section">
     <div class="container hero-grid">
       <!-- Left Column: Impactful Editorial Headline -->
-      <div>
+      <div class="hero-content-col">
+        <div class="hero-badge-wrap">
+          <span class="hero-eyebrow">
+            <i class="fa-solid fa-shield-halved"></i> 501(c)(3) TAX-EXEMPT · LONG ISLAND, NY
+          </span>
+        </div>
         <h1 class="hero-impact-statement">
           <span class="hero-title-lead">Small Acts</span>
           <span class="hero-title-sub">Can Create</span>
           <span class="hero-title-highlight">Lasting Change.</span>
         </h1>
+
+        <!-- Mobile-Only Hero Photo (Clean & Crisp on Phones, Hidden on Desktop) -->
+        <div class="hero-mobile-photo-wrap">
+          <img src="assets/images/Firefly.png" alt="Children of Adam - Small Acts Lasting Change" class="hero-mobile-photo">
+        </div>
 
         <p class="hero-tagline-text">
           Raising compassionate, Islamically grounded youth who serve people in need, from Long Island to the world: Islamic learning for families, welfare for neighbors, and relief for communities in crisis.
@@ -231,12 +241,48 @@
     </div>
   </section>
 
-  <!-- SECTION 2: "GIVE A HELPING HAND TO THOSE WHO NEED IT!" (Left: Narrative & Pillars, Right: Asymmetrical Bento Grid Covering to Bottom) -->
+  <!-- SECTION 2: "GIVE A HELPING HAND TO THOSE WHO NEED IT!" (Photos Section Before Text Section) -->
   <section class="feature-section" id="about">
     <div class="container feature-grid-reversed">
-      <!-- Left: Narrative & 4 Minimalist Pillars -->
+      <!-- Photos: Dynamic Asymmetrical Bento Grid (Placed Before Text) -->
+      <div class="feature-bento-grid">
+        <!-- 1. Tall Featured Image (Left Column of Bento Grid, Spans Rows 1-2) -->
+        <div class="bento-tall">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop" 
+               alt="Youth empowerment and learning" 
+               loading="lazy">
+          <div class="bento-overlay-label">Enlighten Minds</div>
+        </div>
+
+        <!-- 2. Top-Right Smaller Photo -->
+        <div class="bento-top-right">
+          <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=600&auto=format&fit=crop" 
+               alt="Serving hot meals to neighbors" 
+               loading="lazy">
+          <div class="bento-overlay-label">Saturday Breakfast</div>
+        </div>
+
+        <!-- 3. Mid-Right Smaller Photo -->
+        <div class="bento-mid-right">
+          <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=600&auto=format&fit=crop" 
+               alt="Clean drinking water plants" 
+               loading="lazy">
+          <div class="bento-overlay-label">Clean Water</div>
+        </div>
+
+        <!-- 4. Bottom Wide Spanning Photo Covering Area to Bottom -->
+        <div class="bento-bottom-wide">
+          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=800&auto=format&fit=crop" 
+               alt="Free healthcare clinics and psychological support" 
+               loading="lazy">
+          <div class="bento-overlay-label">Free Healthcare</div>
+        </div>
+      </div>
+
+      <!-- Narrative & 4 Minimalist Pillars (Placed After Photos) -->
       <div class="feature-text-col">
-        <div class="badge-clean-red" style="margin-bottom:0.75rem;"> Our Purpose & Story
+        <div class="badge-clean-red" style="margin-bottom:0.75rem;">
+          <i class="fa-solid fa-seedling"></i> Our Purpose &amp; Story
         </div>
         <h2 class="feature-title">
           Give a helping hand to those who need it!
@@ -286,40 +332,6 @@
               <p class="ox-pillar-text">Saturday morning community breakfasts, emergency relief shipments, and tutoring.</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Right: Dynamic Asymmetrical Bento Grid Covering Down to Bottom -->
-      <div class="feature-bento-grid">
-        <!-- 1. Tall Featured Image (Left Column of Bento Grid, Spans Rows 1-2) -->
-        <div class="bento-tall">
-          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop" 
-               alt="Youth empowerment and learning" 
-               loading="lazy">
-        </div>
-
-        <!-- 2. Top-Right Smaller Photo -->
-        <div class="bento-top-right">
-          <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=600&auto=format&fit=crop" 
-               alt="Serving hot meals to neighbors" 
-               loading="lazy">
-          
-        </div>
-
-        <!-- 3. Mid-Right Smaller Photo -->
-        <div class="bento-mid-right">
-          <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=600&auto=format&fit=crop" 
-               alt="Clean drinking water plants" 
-               loading="lazy">
-          
-        </div>
-
-        <!-- 4. Bottom Wide Spanning Photo Covering Area to Bottom -->
-        <div class="bento-bottom-wide">
-          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=800&auto=format&fit=crop" 
-               alt="Free healthcare clinics and psychological support" 
-               loading="lazy">
-          
         </div>
       </div>
     </div>

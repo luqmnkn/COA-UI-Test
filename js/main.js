@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = +counter.getAttribute('data-target');
       const suffix = counter.getAttribute('data-suffix') || '';
       const prefix = counter.getAttribute('data-prefix') || '';
-      const duration = 2000;
-      const stepTime = 20;
+      const duration = 1800;
+      const stepTime = 30;
       const steps = duration / stepTime;
       const increment = target / steps;
       let current = 0;
@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-          counter.innerText = prefix + target.toLocaleString() + suffix;
+          counter.textContent = prefix + target.toLocaleString() + suffix;
           clearInterval(timer);
         } else {
-          counter.innerText = prefix + Math.floor(current).toLocaleString() + suffix;
+          counter.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
         }
       }, stepTime);
     });
