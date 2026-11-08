@@ -20,8 +20,8 @@
   --brand-purple: #7c3aed;
   
   /* Oxygen Charity Theme Palette */
-  --color-white: #d2e4c1;
-  --color-sand: #f8f6f0;
+  --color-white:  #ffffff;
+  --color-sand:#fffbf4;
   --color-sand-light: #fdfbf7;
   --color-sand-footer: #ece7de;
   --color-sand-border: #e3ded4;
@@ -70,7 +70,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-gray-800);
-  background-color:#d2e4c1;
+  background-color:#f9f9e0;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
